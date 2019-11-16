@@ -1,0 +1,32 @@
+{
+  "name": "nodebb-plugin-openapi-spec",
+  "version": "1.0.0",
+  "description": "openapi spec generator",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NodeBB/nodebb-plugin-openapi-spec.git"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "dice",
+    "roll"
+  ],
+  "author": {
+    "name": "NodeBB Team",
+    "email": "sales@nodebb.org"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NodeBB/nodebb-plugin-openapi-spec/issues"
+  },
+  "homepage": "https://github.com/NodeBB/nodebb-plugin-openapi-spec#readme",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "express-oas-generator": "github:NodeBB/express-oas-generator#master"
+  }
+}

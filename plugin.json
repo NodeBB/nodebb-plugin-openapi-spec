@@ -1,0 +1,19 @@
+{
+    "name": "OpenApi-Spec",
+    "Description": "NodeBB Plugin for generating and serving NodeBB's routes per the OpenApi's Spec",
+    "id": "nodebb-plugin-openapi-spec",
+    "url": "https://github.com/NodeBB/nodebb-plugin-openapi-spec",
+    "library": "library.js",
+    "hooks": [
+      { "hook": "static:app.load", "method": "init" },
+      { "hook": "action:nodebb.ready", "method": "parseRoutes" },
+      { "hook": "filter:admin.header.build", "method": "addAdminNavigation" }
+    ],
+    "acpScripts": [
+      "./static/admin.js"
+    ],
+    "staticDirs": {
+		"public": "public"
+	},
+    "templates": "static/templates"
+  }
