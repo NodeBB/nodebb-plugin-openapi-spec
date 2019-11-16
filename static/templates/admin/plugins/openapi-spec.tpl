@@ -12,7 +12,8 @@
             <div class="form-group">
                 <label>Exclude Pattern</label>
                 <input id="excludePattern" name="excludePattern" type="text" class="form-control" placeholder="admin.*">
-                 <small class="text-muted">A regexp valid pattern to exclude specific paths in the spec response. By the core logic, only `^/api` paths are shown in the spec.</small>
+                 <small class="text-muted">A regexp valid pattern to exclude specific paths in the spec response. 
+                 By the core logic, only <code>^/api.*</code> paths are shown in the spec.</small>
             </div>
         </div>
     </div>
