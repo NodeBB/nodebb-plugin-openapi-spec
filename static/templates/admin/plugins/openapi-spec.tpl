@@ -49,7 +49,7 @@
             Spec API link: <a href="{base_url}/api/plugins/openapi-spec/spec" target="_blank">{base_url}/api/plugins/openapi-spec/spec</a>
           </li>
           <li>
-            Swagger-UI Page: <a href="{base_url}/api/plugins/openapi-spec/spec" target="_blank">{base_url}/api/plugins/openapi-spec/spec</a>
+            Swagger-UI HTML Page: <a href="{base_url}/assets/plugins/nodebb-plugin-openapi-spec/public/spec.html" target="_blank">{base_url}/assets/plugins/nodebb-plugin-openapi-spec/public/spec.html</a>
           </li>
           <li>
               File issues <a href="https://github.com/NodeBB/nodebb-plugin-openapi-spec/issues" target="_blank">here</a>
