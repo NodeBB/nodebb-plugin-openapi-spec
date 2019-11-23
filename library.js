@@ -8,6 +8,7 @@ const nconf = require.main.require('nconf');
 const meta = require.main.require('./src/meta');
 const db = require.main.require('./src/database');
 const plg = require('./plugin.json');
+const jsonSize = require('json-size')
 
 const defaultSettings = {
     includeResponseBodyExamples: 'off',
@@ -141,12 +142,14 @@ plugin.predefined = function (json, { req, res }) {
 plugin.store = {
     async getSpec() {
         let spec = await db.getObject(`${plugin.name}:spec`);
+        spec.fullSizeBytes = jsonSize(spec);
         return spec;
     },
     async setSpec(data) {
         let d = _.cloneDeep(data)
         delete d.info;
         delete d.servers;
+        delete d.fullSizeBytes;
         d = removeDots(d);
         try {
             await db.setObject(`${plugin.name}:spec`, d);

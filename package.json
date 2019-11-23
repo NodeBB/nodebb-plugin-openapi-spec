@@ -26,7 +26,8 @@
   },
   "homepage": "https://github.com/NodeBB/nodebb-plugin-openapi-spec#readme",
   "dependencies": {
-    "lodash": "^4.17.15",
-    "express-oas-generator": "github:NodeBB/express-oas-generator#master"
+    "express-oas-generator": "github:NodeBB/express-oas-generator#master",
+    "json-size": "^1.0.0",
+    "lodash": "^4.17.15"
   }
 }

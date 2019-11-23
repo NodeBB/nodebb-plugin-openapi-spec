@@ -2,6 +2,43 @@
 # yarn lockfile v1
 
 
-lodash@^4.17.15:
+commander@^2.9.0:
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+
+express-list-endpoints@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/express-list-endpoints/-/express-list-endpoints-3.0.1.tgz#d304fe9457ad14b8cf8692759398e3eea21abcb2"
+
+"express-oas-generator@github:NodeBB/express-oas-generator#master":
+  version "1.0.13"
+  resolved "https://codeload.github.com/NodeBB/express-oas-generator/tar.gz/097eeb9832bd4b6017a6df68be749cfe470e7297"
+  dependencies:
+    express-list-endpoints "^3.0.1"
+    generate-schema "^2.6.0"
+    lodash "^4.17.12"
+
+generate-schema@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/generate-schema/-/generate-schema-2.6.0.tgz#9ac037550fd4243783a9f7681d39bee8870bcec2"
+  dependencies:
+    commander "^2.9.0"
+    type-of-is "^3.4.0"
+
+json-size@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/json-size/-/json-size-1.0.0.tgz#4636046df470d87ffbe6c137c764ed0efcd5b588"
+  dependencies:
+    utf8-length "0.0.1"
+
+lodash@^4.17.12, lodash@^4.17.15:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+
+type-of-is@^3.4.0:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/type-of-is/-/type-of-is-3.5.1.tgz#eec2fc89b828dbf9900eb6416eee30f4fe0fcd31"
+
+utf8-length@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/utf8-length/-/utf8-length-0.0.1.tgz#d315c4bed529c977f18dd35c73d72628327d9ada"
