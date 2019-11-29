@@ -103,8 +103,7 @@ const removeSchemaExamples = (response) => {
         if (response.properties[prop].type === 'object') {
             removeSchemaExamples(response.properties[prop]);
         } else {
-            response.properties[prop].example = null
-            response.properties[prop].exampleNote = 'Example is hidden'
+            delete response.properties[prop].example
         }
     }
 };
@@ -131,25 +130,31 @@ plugin.predefined = function (json, { req, res }) {
     }
     filterPaths(d, { includePattern: plugin.settings.includePattern, excludePattern: plugin.settings.excludePattern })
 
+    d.__meta__ = {
+        fullSizeBytes: jsonSize(d)
+    };
+
     if (plugin.settings.includeResponseBodyExamples !== 'on') {
         // so we won't show sensitive info that were sent in any response body
         // path and query params because, well, they are kinda public.
         removeExamples(d);
+        d.__meta__.note = 'All examples have been removed to hide sensitive information';
     }
+    d.__meta__.liteSizeBytes = jsonSize(d);
+
     return d;
 };
 
 plugin.store = {
     async getSpec() {
         let spec = await db.getObject(`${plugin.name}:spec`);
-        spec.fullSizeBytes = jsonSize(spec);
         return spec;
     },
     async setSpec(data) {
         let d = _.cloneDeep(data)
         delete d.info;
         delete d.servers;
-        delete d.fullSizeBytes;
+        delete d.__meta__;
         d = removeDots(d);
         try {
             await db.setObject(`${plugin.name}:spec`, d);
