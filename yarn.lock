@@ -10,8 +10,9 @@ express-list-endpoints@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/express-list-endpoints/-/express-list-endpoints-3.0.1.tgz#d304fe9457ad14b8cf8692759398e3eea21abcb2"
 
-"express-oas-generator@github:NodeBB/express-oas-generator#master":
+"express-oas-generator@github:NodeBB/express-oas-generator#097eeb9832bd4b6017a6df68be749cfe470e7297":
   version "1.0.13"
+  uid "097eeb9832bd4b6017a6df68be749cfe470e7297"
   resolved "https://codeload.github.com/NodeBB/express-oas-generator/tar.gz/097eeb9832bd4b6017a6df68be749cfe470e7297"
   dependencies:
     express-list-endpoints "^3.0.1"
@@ -32,8 +33,8 @@ json-size@^1.0.0:
     utf8-length "0.0.1"
 
 lodash@^4.17.12, lodash@^4.17.15:
-  version "4.17.15"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
+  version "4.17.19"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.19.tgz#e48ddedbe30b3321783c5b4301fbd353bc1e4a4b"
 
 type-of-is@^3.4.0:
   version "3.5.1"
